@@ -23,7 +23,7 @@ Il sito non ha backend, non ha database, non usa framework UI di terze parti e n
 
 ## Requisiti
 
-- Node.js 18.17+ (consigliato 20 LTS, come usato in CI)
+- Node.js 22.12+ (richiesto da Astro 7; è la versione usata anche in CI)
 - npm
 
 ## Comandi
