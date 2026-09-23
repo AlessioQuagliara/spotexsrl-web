@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Pagina non trovata"
+  description="La pagina richiesta non è stata trovata sul sito di Spotex S.r.l."
+  noindex
+>
+  <section class="error-page">
+    <div class="container">
+      <p class="error-page__code" aria-hidden="true">404</p>
+      <h1>Pagina non trovata</h1>
+      <p class="lede" style="margin-inline: auto;">
+        La pagina richiesta non esiste o è stata spostata. È possibile tornare alla home o
+        consultare i contatti ufficiali.
+      </p>
+      <div class="hero__actions" style="justify-content: center;">
+        <a href="/" class="btn btn-primary">Torna alla home</a>
+        <a href="/contatti/" class="btn btn-secondary">Contatti</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

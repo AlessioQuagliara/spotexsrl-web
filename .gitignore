@@ -1,0 +1,34 @@
+# build output
+dist/
+
+# dependencies
+node_modules/
+
+# astro
+.astro/
+
+# environment variables
+.env
+.env.production
+
+# macOS
+.DS_Store
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# materiali sorgente locali: contengono la Visura camerale (dati non da
+# pubblicare) e non servono alla build (i loghi effettivamente usati dal
+# sito vivono già in public/images/)
+assets/
+
+# progetto di riferimento non correlato al sito Spotex, non deve entrare
+# in questo repository
+saas-landingpage-html@2/

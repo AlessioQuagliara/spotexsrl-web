@@ -1,0 +1,34 @@
+---
+import { company } from "../data/company.js";
+---
+
+<div
+  class="liquidation-banner"
+  role="region"
+  aria-label="Comunicazione importante sullo stato societario"
+>
+  <div class="liquidation-banner__inner">
+    <span class="liquidation-banner__icon" role="img" aria-label="Icona informativa">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="false" focusable="false">
+        <circle cx="12" cy="12" r="9.25" stroke="currentColor" stroke-width="1.75" />
+        <path
+          d="M12 10.75v6"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+        />
+        <circle cx="12" cy="7.6" r="1.15" fill="currentColor" />
+      </svg>
+    </span>
+    <p class="liquidation-banner__text">
+      <span class="liquidation-banner__title"
+        >COMUNICAZIONE IMPORTANTE — Spotex S.r.l. è in liquidazione.</span
+      >
+      <span class="liquidation-banner__subtitle"
+        >Per informazioni o comunicazioni ufficiali, contattare la società tramite PEC: <a
+          href={`mailto:${company.pec}`}>{company.pec}</a
+        >.</span
+      >
+    </p>
+  </div>
+</div>

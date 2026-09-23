@@ -1,0 +1,185 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import CompanyInfoCard from "../components/CompanyInfoCard.astro";
+
+const services = [
+  {
+    title: "Sviluppo software",
+    description:
+      "Progettazione e realizzazione di software e strumenti digitali pensati per supportare processi e attività operative.",
+  },
+  {
+    title: "Piattaforme e siti web",
+    description:
+      "Creazione e gestione di piattaforme web, siti internet e sistemi di interfaccia digitali.",
+  },
+  {
+    title: "Marketing digitale",
+    description:
+      "Supporto alla conduzione di campagne di marketing e servizi pubblicitari digitali.",
+  },
+];
+
+const approach = [
+  {
+    title: "Analisi delle esigenze",
+    description: "Comprensione del contesto operativo e degli obiettivi del progetto.",
+  },
+  {
+    title: "Progettazione tecnica",
+    description: "Definizione dell'architettura e delle scelte tecnologiche più adeguate.",
+  },
+  {
+    title: "Sviluppo e implementazione",
+    description: "Realizzazione della soluzione secondo le specifiche definite.",
+  },
+  {
+    title: "Supporto e manutenzione",
+    description: "Interventi tecnici a supporto della continuità della soluzione.",
+  },
+];
+---
+
+<BaseLayout
+  title="Spotex S.r.l. — Software e soluzioni digitali"
+  description="Spotex S.r.l. opera nello sviluppo di software, piattaforme web e soluzioni digitali orientate alla semplicità, all'affidabilità e alla sostenibilità tecnica."
+>
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <span class="eyebrow">Software e soluzioni digitali</span>
+        <h1>Tecnologia concreta per esigenze reali.</h1>
+        <p class="lede">
+          Spotex S.r.l. opera nello sviluppo di software, piattaforme web e soluzioni
+          digitali orientate alla semplicità, all'affidabilità e alla sostenibilità tecnica.
+        </p>
+        <div class="hero__actions">
+          <a href="/servizi/" class="btn btn-primary">Scopri i servizi</a>
+          <a href="/contatti/" class="btn btn-secondary">Contatti ufficiali</a>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <svg viewBox="0 0 400 400" fill="none">
+          <circle cx="200" cy="200" r="150" stroke="#DCE3EA" stroke-width="1.5" />
+          <circle cx="200" cy="200" r="110" stroke="#DCE3EA" stroke-width="1.5" />
+          <line x1="90" y1="130" x2="200" y2="90" stroke="#001F3F" stroke-width="1.75" />
+          <line x1="200" y1="90" x2="308" y2="140" stroke="#001F3F" stroke-width="1.75" />
+          <line x1="90" y1="130" x2="120" y2="270" stroke="#001F3F" stroke-width="1.75" />
+          <line x1="308" y1="140" x2="288" y2="272" stroke="#001F3F" stroke-width="1.75" />
+          <line x1="120" y1="270" x2="288" y2="272" stroke="#001F3F" stroke-width="1.75" />
+          <line x1="200" y1="90" x2="200" y2="200" stroke="#001F3F" stroke-width="1.5" opacity="0.5" />
+          <line x1="120" y1="270" x2="200" y2="200" stroke="#001F3F" stroke-width="1.5" opacity="0.5" />
+          <line x1="288" y1="272" x2="200" y2="200" stroke="#001F3F" stroke-width="1.5" opacity="0.5" />
+          <circle cx="90" cy="130" r="7" fill="#001F3F" />
+          <circle cx="200" cy="90" r="7" fill="#001F3F" />
+          <circle cx="308" cy="140" r="7" fill="#001F3F" />
+          <circle cx="120" cy="270" r="7" fill="#001F3F" />
+          <circle cx="288" cy="272" r="7" fill="#001F3F" />
+          <polygon points="210,150 178,206 200,206 190,250 232,192 206,192" fill="#C87900" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="services-heading">Servizi</h2>
+        <p class="lede">
+          Attività di programmazione informatica e servizi digitali complementari.
+        </p>
+      </div>
+      <div class="card-grid">
+        <ServiceCard title={services[0].title} description={services[0].description}>
+          <Fragment slot="icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </Fragment>
+        </ServiceCard>
+        <ServiceCard title={services[1].title} description={services[1].description}>
+          <Fragment slot="icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect
+                x="3.5"
+                y="5.5"
+                width="17"
+                height="13"
+                rx="1.75"
+                stroke="currentColor"
+                stroke-width="1.75"
+              />
+              <path d="M3.5 9.5h17" stroke="currentColor" stroke-width="1.75" />
+              <path
+                d="M7 13.25h6"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+              />
+            </svg>
+          </Fragment>
+        </ServiceCard>
+        <ServiceCard title={services[2].title} description={services[2].description}>
+          <Fragment slot="icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3.5 10.5v3a1.5 1.5 0 001.5 1.5h1.2l7.3 3.9v-13l-7.3 3.9H5a1.5 1.5 0 00-1.5 1.5z"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17.5 9.25a4 4 0 010 5.5M20 7a7.5 7.5 0 010 10"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+              />
+            </svg>
+          </Fragment>
+        </ServiceCard>
+      </div>
+      <p style="margin-top: var(--space-4);">
+        <a href="/servizi/" class="text-link">Approfondisci i servizi</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="approach-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="approach-heading">Soluzioni chiare, costruite per durare.</h2>
+        <p class="lede">
+          Ogni progetto richiede scelte proporzionate al contesto. L'obiettivo è realizzare
+          strumenti digitali comprensibili, manutenibili e adatti alle esigenze operative.
+        </p>
+      </div>
+      <div class="approach-grid">
+        {
+          approach.map((item, index) => (
+            <div class="approach-item">
+              <span class="approach-item__index" aria-hidden="true">{index + 1}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface" aria-labelledby="company-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="company-heading">Informazioni societarie</h2>
+      </div>
+      <CompanyInfoCard />
+    </div>
+  </section>
+</BaseLayout>

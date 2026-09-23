@@ -1,0 +1,49 @@
+---
+import { company, addressFull, pecMailto } from "../data/company.js";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <div class="site-footer__logo">
+        <img
+          src="/images/spotex-logo-light.png"
+          width="2042"
+          height="476"
+          alt={`${company.legalName} — ${company.payoff}`}
+          loading="lazy"
+        />
+      </div>
+      <div class="site-footer__meta">
+        <p>{company.legalName}</p>
+        <p>{addressFull}</p>
+        <p>P. IVA / C.F.: {company.vatTaxId}</p>
+        <p>REA: {company.rea}</p>
+        <p><a href={pecMailto}>{company.pec}</a></p>
+      </div>
+    </div>
+
+    <div>
+      <h2 id="footer-legal-heading">Informazioni</h2>
+      <ul aria-labelledby="footer-legal-heading">
+        <li><a href="/privacy/">Privacy</a></li>
+        <li><a href="/cookie/">Cookie</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 id="footer-status-heading">Stato societario</h2>
+      <p class="site-footer__status" aria-labelledby="footer-status-heading">
+        Spotex S.r.l. è in liquidazione.
+      </p>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <div class="site-footer__bottom-inner">
+      &copy; {year} {company.legalName} — Tutti i diritti riservati.
+    </div>
+  </div>
+</footer>

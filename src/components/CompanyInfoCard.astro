@@ -1,0 +1,23 @@
+---
+import { company, addressFull, pecMailto } from "../data/company.js";
+---
+
+<div class="info-card">
+  <dl>
+    <dt>Ragione sociale</dt>
+    <dd>{company.legalName}</dd>
+
+    <dt>Sede legale</dt>
+    <dd>{addressFull}</dd>
+
+    <dt>P. IVA / C.F.</dt>
+    <dd>{company.vatTaxId}</dd>
+
+    <dt>REA</dt>
+    <dd>{company.rea}</dd>
+
+    <dt>PEC</dt>
+    <dd><a class="text-link" href={pecMailto}>{company.pec}</a></dd>
+  </dl>
+  <p class="info-card__note">Le comunicazioni ufficiali possono essere inviate tramite PEC.</p>
+</div>

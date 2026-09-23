@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { company, addressFull, pecMailto, googleMapsUrl } from "../../data/company.js";
+---
+
+<BaseLayout
+  title="Contatti"
+  description="Recapiti ufficiali di Spotex S.r.l.: sede legale, PEC e dati societari. Per comunicazioni formali contattare la società tramite PEC."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Contatti</span>
+        <h1>Contatti</h1>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <dl class="contact-list">
+            <div>
+              <dt>Ragione sociale</dt>
+              <dd>{company.legalName}</dd>
+            </div>
+            <div>
+              <dt>Sede legale</dt>
+              <dd>{addressFull}</dd>
+            </div>
+            <div>
+              <dt>PEC</dt>
+              <dd><a class="text-link" href={pecMailto}>{company.pec}</a></dd>
+            </div>
+            <div>
+              <dt>P. IVA / C.F.</dt>
+              <dd>{company.vatTaxId}</dd>
+            </div>
+            <div>
+              <dt>REA</dt>
+              <dd>{company.rea}</dd>
+            </div>
+          </dl>
+
+          <div class="hero__actions">
+            <a href={pecMailto} class="btn btn-primary">Scrivi via PEC</a>
+            <a
+              href={googleMapsUrl}
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apri in Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="status-box">
+            <span class="status-box__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9.25" stroke="currentColor" stroke-width="1.75" />
+                <path d="M12 10.75v6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+                <circle cx="12" cy="7.6" r="1.15" fill="currentColor" />
+              </svg>
+            </span>
+            <div>
+              <strong>Spotex S.r.l. è in liquidazione.</strong>
+              <p>Per comunicazioni ufficiali si prega di utilizzare esclusivamente la PEC indicata in questa pagina.</p>
+            </div>
+          </div>
+
+          <p class="lede" style="margin-top: var(--space-4); font-size: 0.95rem;">
+            Il sito non dispone di un modulo di contatto: per qualsiasi richiesta o
+            comunicazione formale è necessario utilizzare la PEC.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
